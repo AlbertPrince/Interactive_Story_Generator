@@ -25,10 +25,17 @@ class Story(db.Model):
     title = db.Column(db.String(100))
     content = db.Column(db.Text)
 
+storyPrelude = [
+   {1 : "A city is plagued by a zom "},
+]
+
 # Routes
 @app.route('/')
 def index():
     return jsonify({'message': 'Hello, this is your Flask backend with PostgreSQL!'})
+
+
+
 
 @app.route('/generate_story', methods=['POST'])
 def generate_story(prompt):
