@@ -27,15 +27,15 @@ class Story(db.Model):
 
 
 
-user_age = input("Enter your age: ")
-user_background = input("Describe your background: ")
-user_skills = input("List your skills: ")
+# user_age = input("Enter your age: ")
+# user_background = input("Describe your background: ")
+# user_skills = input("List your skills: ")
 
 story = {
     'user': {
-        'age': user_age,
-        'background': user_background,
-        'skills': user_skills
+        'age': 25,
+        'background': 'Mechanic',
+        'skills': 'Can fix and upgrade mechanical parts. Can also craft weapons and tools'
     },
     'characters': {
         'sister1': {'age': 26, 'background': 'Medical student', 'skills': 'Basic medical knowledge'},
@@ -52,21 +52,23 @@ story = {
     'current_objective_index': 0
 }
 
-# Example: Handle user choices and branching logic
-def handle_user_choice(user_choice):
-    if user_choice == 1:
-        # Handle choice 1
-        return "Outcome for choice 1"
-    elif user_choice == 2:
-        # Handle choice 2
-        return "Outcome for choice 2"
-    # Add more choices as needed
-
-# Example: Present choices to the user
 def present_choices(choices):
     print("Choose one:")
     for i, choice in enumerate(choices, start=1):
         print(f"{i}. {choice}")
+
+def handle_user_choice():
+    choices = ["Option 1", "Option 2"]  # Replace with actual choices
+    present_choices(choices)
+    user_choice = int(input("Enter your choice (1 or 2): "))
+    
+    # Update story based on user's choice
+    if story['current_objective_index'] == 0:  # Gather Supplies
+        handle_gather_supplies_choice(user_choice)
+    elif story['current_objective_index'] == 1:  # Plan the Route
+        handle_plan_route_choice(user_choice)
+    # Add similar logic for other objectives...
+
 
 # Example: Main loop to drive the story
 def main_story_loop():
