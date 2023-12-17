@@ -16,7 +16,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 client = OpenAI(
-    api_key=os.environ.get("CUSTOM_ENV_NAME"),
+    api_key=os.environ.get("OPENAI_API_KEY"),
 )
 
 # Define your model

@@ -1,0 +1,17 @@
+# Create a virtual environment 
+python -m venv .venv
+
+# Activate the virtual environment
+
+# Windows
+.venv\Scripts\activate
+
+pip install Flask
+# macOS and Linux
+source .venv/bin/activate
+
+pip install Flask-SQLAlchemy
+
+pip install psycopg2-binary
+
+pip install --upgrade openai 
