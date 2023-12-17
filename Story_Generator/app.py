@@ -25,9 +25,66 @@ class Story(db.Model):
     title = db.Column(db.String(100))
     content = db.Column(db.Text)
 
-storyPrelude = [
-   {1 : "A city is plagued by a zom "},
-]
+
+
+user_age = input("Enter your age: ")
+user_background = input("Describe your background: ")
+user_skills = input("List your skills: ")
+
+story = {
+    'user': {
+        'age': user_age,
+        'background': user_background,
+        'skills': user_skills
+    },
+    'characters': {
+        'sister1': {'age': 26, 'background': 'Medical student', 'skills': 'Basic medical knowledge'},
+        'sister2': {'age': 23, 'background': 'Computer programmer', 'skills': 'Technical expertise'},
+        'little_brother': {'age': 10, 'background': 'Student', 'skills': 'Agility and curiosity'}
+    },
+    'scene': "City of Shadows",
+    'objectives': [
+        "Gather Supplies",
+        "Plan the Route",
+        "Navigate the Streets",
+        "Survival Choices"
+    ],
+    'current_objective_index': 0
+}
+
+# Example: Handle user choices and branching logic
+def handle_user_choice(user_choice):
+    if user_choice == 1:
+        # Handle choice 1
+        return "Outcome for choice 1"
+    elif user_choice == 2:
+        # Handle choice 2
+        return "Outcome for choice 2"
+    # Add more choices as needed
+
+# Example: Present choices to the user
+def present_choices(choices):
+    print("Choose one:")
+    for i, choice in enumerate(choices, start=1):
+        print(f"{i}. {choice}")
+
+# Example: Main loop to drive the story
+def main_story_loop():
+    while not end_of_story:
+        choices = get_available_choices()  # Implement this function to get current choices
+        present_choices(choices)
+        user_choice = int(input("Enter your choice: "))
+        outcome = handle_user_choice(user_choice)
+        print(outcome)
+
+def generate_story_element(prompt):
+    response = client.Completion.create(
+        engine="text-davinci-002",
+        prompt=prompt,
+        max_tokens=150
+    )
+    return response['choices'][0]['text']
+
 
 # Routes
 @app.route('/')

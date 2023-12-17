@@ -1,0 +1,73 @@
+Setting Scene: "City of Shadows"
+
+The once vibrant city now lay shrouded in an eerie silence, broken only by distant moans and the occasional sound of footsteps dragging along the desolate streets. The air is thick with tension, and the sky is a muted gray, as if the very atmosphere mourns the loss of humanity.
+
+Background:
+A viral outbreak has turned the city's inhabitants into relentless, flesh-hungry zombies. In the midst of chaos, you find yourself barricaded in a small apartment with your two sisters and little brother. Supplies are scarce, and every move you make could mean the difference between survival and becoming one of the undead.
+
+Characters:
+
+You (the user):
+
+Age: [User Input]
+Background: [User Input]
+Skills: [User Input]
+Sister 1 (Eva):
+
+Age: 26
+Background: Medical student
+Skills: Basic medical knowledge
+Sister 2 (Liam):
+
+Age: 23
+Background: Computer programmer
+Skills: Technical expertise
+Little Brother (Noah):
+
+Age: 10
+Background: Student
+Skills: Agility and curiosity
+Situation:
+The apartment is dimly lit by flickering candles, casting long shadows across worn-out furniture. The pantry is nearly empty, and the last radio transmission mentioned evacuations at the airport. The decision is made: you must guide your siblings through the zombie-infested city to reach the airport and hopefully find safety.
+
+Objectives:
+
+Gather Supplies:
+
+Explore the apartment for any remaining supplies, such as food, water, and medical supplies.
+Make tough choices about what to take and what to leave behind.
+[First Choice]
+
+Do you prioritize gathering medical supplies for Eva, technical equipment for Liam, or extra food for the journey? Choose one:
+A. Medical Supplies
+B. Technical Equipment
+C. Extra Food
+Plan the Route:
+
+Use a city map to plan the safest route to the airport, avoiding known zombie hotspots.
+Consider shortcuts through buildings, alleyways, or abandoned vehicles.
+[Second Choice]
+
+Your map reveals two possible routes: a direct but riskier path through the city streets or a longer but potentially safer route through the outskirts. Choose one:
+A. Direct Through the City
+B. Longer Through the Outskirts
+Navigate the Streets:
+
+Make decisions on how to handle encounters with zombies—should you sneak past, distract them, or engage in combat?
+Keep an eye on your siblings' well-being and make choices that ensure their safety.
+[Third Choice]
+
+As you approach a street filled with zombies, you notice a narrow alley to the left and an abandoned car to the right. Choose one:
+A. Take the Narrow Alley
+B. Use the Abandoned Car as Cover
+Survival Choices:
+
+Manage resources wisely to avoid exhaustion, hunger, and injury.
+Face moral dilemmas that test your humanity in this post-apocalyptic world.
+[Fourth Choice]
+
+While passing through an abandoned store, you hear a distant cry for help. Investigate or continue on your journey? Choose one:
+A. Investigate the Cry for Help
+B. Continue on the Journey
+Risk of Infection:
+Any bite or scratch from a zombie means certain death. You must protect your siblings at all costs, and every decision you make could determine their fate. Your first choices will set the tone for the journey and influence your chances of survival. Choose wisely.
