@@ -4,6 +4,7 @@
 docs/_build/
 
 .venv/
+.env
 
 *.pyc
 __pycache__/

@@ -1,7 +1,10 @@
 # app.py
 
+import os
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
+
+from openai import OpenAI
 
 app = Flask(__name__)
 
@@ -11,6 +14,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize the SQLAlchemy extension
 db = SQLAlchemy(app)
+
+client = OpenAI(
+    api_key=os.environ.get("CUSTOM_ENV_NAME"),
+)
 
 # Define your model
 class Story(db.Model):
