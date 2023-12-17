@@ -31,10 +31,27 @@ def index():
     return jsonify({'message': 'Hello, this is your Flask backend with PostgreSQL!'})
 
 @app.route('/generate_story', methods=['POST'])
-def generate_story():
+def generate_story(prompt):
     data = request.get_json()
     # Implement story generation logic based on data
-    # ...
+    # response = client.Completion.create(
+    #     engine="text-davinci-002",  # Choose the GPT-3 engine
+    #     prompt=prompt,
+    #     max_tokens=500,  # Adjust as needed
+    #     temperature=0.7,  # Adjust for creativity vs. coherence
+    #     n = 1  # Number of responses to generate
+    # )
+    response = client.chat.completions.create(
+  model="gpt-3.5-turbo",
+  messages=[
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Who won the world series in 2020?"},
+    {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
+    {"role": "user", "content": "Where was it played?"}
+  ]
+)
+
+    return response.choices[0].text.strip()
 
     # Example: Save data to PostgreSQL
     new_story = Story(title=data['title'], content=data['content'])
